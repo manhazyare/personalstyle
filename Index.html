@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal style</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: aliceblue;
+            color: #333;
+            padding: 0;
+            margin: 0;
+        }
+
+        .hero {
+            background: url("https://images.pexels.com/photos/33566210/pexels-photo-33566210.jpeg");
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin: 0 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .gallery {
+            margin-bottom: 20px;
+            padding: 10px 20px;
+        }
+
+        .gallery h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .gallery .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .gallery-grid .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in;
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-grid .gallery-item:hover {
+            transform: scale(1.1);
+        }
+
+        .gallery .gallery-grid .gallery-item img {
+            width: 100%;
+            object-fit: cover;
+
+        }
+
+        .gallery .gallery-grid .gallery-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.1);
+            color: rgb(255, 253, 253);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .gallery .gallery-grid .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        #blog {
+            padding: 5px 20px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #blog h2 {
+            font-size: 1.5rem;
+        }
+
+        .blog-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            justify-content: center;
+        }
+        .blog-container article{
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .blog-container article img{
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+        }
+        footer{
+            background-color: black;
+            color: rgb(8, 230, 0);
+            text-align: center;
+            padding: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero">
+        <div class="content">
+            <h1>Hi, I’m Alex.</h1>
+            <p>I wander with a camera, chasing light from snowy peaks to neon nights. These are pieces of my journey —
+                raw, imperfect, and real
+
+            </p>
+        </div>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li> <a href="mygallery">Gallery</a></li>
+            <li> <a href="journey">Journey</a></li>
+            <li> <a href="blog">Blog</a></li>
+        </ul>
+    </nav>
+    <main class="main-content">
+        <section class="gallery" id="mygallery">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/33585716/pexels-photo-33585716.jpeg">
+
+                    <div class="overlay">Waves, sand, shared smiles</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/33587272/pexels-photo-33587272.jpeg">
+                    <div class="overlay">Stories, laughs, timeless bonds</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/33574660/pexels-photo-33574660.jpeg">
+
+                    <div class="overlay">Smiles, moments, bonds stronger</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/33566406/pexels-photo-33566406.jpeg">
+
+                    <div class="overlay">Trees, trails, whispers soft.</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/33569474/pexels-photo-33569474.jpeg">
+
+                    <div class="overlay">Sky, flight, freedom wide</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery"  id="journey">
+            <h2>Journey</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/33557391/pexels-photo-33557391.jpeg">
+
+                    <div class="overlay">Steps, roads, stories unfold.</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/33552554/pexels-photo-33552554.jpeg">
+
+
+                    <div class="overlay">Journeys, steps, endless horizons</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/33541797/pexels-photo-33541797.jpeg">
+
+                    <div class="overlay">Miles, moments, memories made</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/33541792/pexels-photo-33541792.jpeg">
+
+                    <div class="overlay">Paths, turns, laughter shared</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/33525915/pexels-photo-33525915.jpeg">
+
+                    <div class="overlay">Trips, talks, nights remembered</div>
+                </div>
+            </div>
+        </section>
+        <section id="blog" class="blog-section">
+            <h2>Blog</h2>
+            <div class="blog-container">
+                <article>
+                    <img src="https://images.pexels.com/photos/7971641/pexels-photo-7971641.jpeg">
+                    <h2>Journeys Beyond the Miles</h2>
+                </article>
+                <article>
+                    <img src="https://images.pexels.com/photos/3466163/pexels-photo-3466163.jpeg">
+                    <h2>Our Journey, Our Story</h2>
+                </article>
+                <article>
+                    <img src="https://images.pexels.com/photos/6443528/pexels-photo-6443528.jpeg">
+                    <h2>Wandering With Friends</h2>
+                </article>
+                <article>
+                    <img src="https://images.pexels.com/photos/12662880/pexels-photo-12662880.jpeg">
+                    <h2>Moments That Move Us</h2>
+                </article>
+                <article>
+                    <img src="https://images.pexels.com/photos/8929264/pexels-photo-8929264.jpeg">
+                    <h2>Stories From Every Road</h2>
+                </article>
+            </div>
+        </section>
+        <footer>
+            <p>
+                &copy; 2025 Alex personal style
+            </p>
+        </footer>
+    </main>
+</body>
+
+</html>
